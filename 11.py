@@ -16,7 +16,7 @@ if page == "Beranda":
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("curah_hujan_papua.csv")
+    df = pd.read_csv("curah hujan papua.csv")
     df.columns = df.columns.str.strip()
     return df
 
