@@ -10,13 +10,13 @@ st.sidebar.title("Navigasi")
 page = st.sidebar.selectbox("Pilih Halaman", ["Beranda", "Visualisasi", "Prediksi Curah Hujan", "Upload Dataset"])
 
 if page == "Beranda":
-    st.image("D:/Document Kuliah/Semester 4/Ai/Code/isi web papua/money.jpg", use_container_width=True)
+    st.image("money.jpg")
     st.title("Aplikasi Analisis Curah Hujan Papua Barat")
     st.write("Selamat datang! Aplikasi ini menampilkan visualisasi data curah hujan dan prediksi menggunakan model machine learning.")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("D:/Document Kuliah/Semester 4/Ai/Code/isi web papua/curah hujan papua barat.csv")
+    df = pd.read_csv("curah_hujan_papua.csv")
     df.columns = df.columns.str.strip()
     return df
 
